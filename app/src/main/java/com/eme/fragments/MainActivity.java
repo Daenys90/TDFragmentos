@@ -19,27 +19,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //buttonF1 = findViewById(R.id.myTextView);
-        //buttonF2 = findViewById(R.id.button2);
+        buttonF1 = findViewById(R.id.button_1);
+        buttonF2 = findViewById(R.id.button_2);
         init();
     }
 
 
     private void init() {
-        getSupportFragmentManager().beginTransaction()
-                .add(R.id.con_tenedor, f, "BLANK")
-                .add(R.id.con_cuchillo, f2, "BLANK2")
-                .commit();
-
-
-        /*
         buttonF1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.d("bla", "creando fragmento");
 
                 getSupportFragmentManager().beginTransaction().add(R.id.con_tenedor, f, "BLANK").commit();
-
             }
         });
 
@@ -50,6 +42,6 @@ public class MainActivity extends AppCompatActivity {
 
                 getSupportFragmentManager().beginTransaction().add(R.id.con_cuchillo, f2, "BLANK2").commit();
             }
-        });*/
+        });
     }
 }
